@@ -1,0 +1,92 @@
+### ==============================================================================
+
+### OmniSec-Hex Core Security Monorepo .gitignore
+
+### ==============================================================================
+
+### 📱 1. Anvil Mobile Labs & Binary Triage Artifacts
+
+### ------------------------------------------------------------------------------
+
+*.apk
+*.apk.idsig
+*.ipa
+*.zip
+*.tar.gz
+*.dex
+*.jar
+*.p12
+*.pfx
+*.keystore 
+
+### Decompiled source extraction dumps
+
+tools/1-anvil-mobile/smali/
+tools/1-anvil-mobile/macho/
+tools/1-anvil-mobile/images/
+tools/1-anvil-mobile/res/ 
+
+### Native compilation artifacts
+
+*.so
+*.dylib
+*.elf 
+
+### 🔌 2. Conduit Native & Local Relay Daemons
+
+### ------------------------------------------------------------------------------
+
+### Local environment bridges (e.g., anvil-bridge.js logs)
+
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-store/
+logs/
+*.log
+npm-debug.log* 
+
+### 🧠 5. Quark Isolated AI - Model Weight Matrices
+
+### ------------------------------------------------------------------------------
+
+### Prevent committing large unquantized model raw sheets or dynamic DB caches
+
+*.bin
+*.onnx
+*.gguf
+tools/5-quark-ai/weights/ 
+
+### Mariadb emulation datastore local sync states
+
+*.sql
+*.sqlite
+*.db 
+
+### 🛰️ 6. Telemetry Prime & 🧪 3. Kinetix DAST - Automated Evidence Reports
+
+### ------------------------------------------------------------------------------
+
+### Scans can generate huge JSON/PDF compliance targets
+
+reports/
+evidence/
+*.pdf
+*findings*.json
+*audit*.html
+*.sarif
+*.csv
+*.har 
+
+### ⚙️ OS & Common Editor Trashes
+
+### ------------------------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.bak
+.env
+.env.local
